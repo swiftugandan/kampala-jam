@@ -1,0 +1,78 @@
+{
+  "penalties": {
+    "boda_scratch":     {"points": 5,   "label": "Boda scratch", "lines": ["A boda squeezed through and took your paint with it.", "Scraaape. He did not look back.", "That boda had a gap in mind. The gap was your door."]},
+    "rebar_scratch":    {"points": 8,   "label": "Manhole rebar", "lines": ["Unfinished manhole. The iron bars were designed for your door.", "Rebar, sticking out, exactly at door height."]},
+    "vehicle_contact":  {"points": 10,  "label": "Vehicle contact", "lines": ["Mirror to mirror. Everybody keeps moving.", "A small kiss with the taxi."]},
+    "flag_ignored":     {"points": 10,  "label": "Ignored the flag", "lines": ["The flag was red. Probably. It had been green a moment ago.", "She waved. You were not sure which way."]},
+    "obstruction":      {"points": 15,  "label": "Hit an obstruction", "lines": ["Kerb, kiosk, wall: something that was not road.", "That was somebody's chapati stand. Almost."]},
+    "altercation":      {"points": 25,  "label": "Altercation with boda rider", "lines": ["Ssebo! Now you have to discuss this.", "The rider parks in front of you. Other riders arrive to help him think.", "You are explaining yourself to nine boda riders."]},
+    "open_drain":       {"points": 40,  "label": "Open drain", "lines": ["One wheel in the open drain. Helpful boys arrive to lift you out.", "The drain had no cover. It has a wheel now."]},
+    "minor_collision":  {"points": 50,  "label": "Minor collision", "lines": ["A proper bump. Both drivers get out to discuss whose fault it is.", "Dented. The traffic behind you is very supportive."]},
+    "trench":           {"points": 60,  "label": "Road works trench", "lines": ["Trench across the road. Too fast for the planks.", "There was a sign. It was behind the trench."]},
+    "hit_security":     {"points": 80,  "label": "Hit a police or army vehicle", "lines": ["The officer gets out slowly. That is never a good sign.", "Of all the bumpers on this road, you chose that one.", "Soldiers climb down from the back. You will be here a while."]},
+    "convoy_violation": {"points": 120, "label": "Moved during the convoy", "lines": ["You do not move when the convoy is passing. An officer explains this.", "Sirens mean stop. You are now having a long chat by the roadside."]},
+    "flooded_ditch":    {"points": 150, "label": "Swallowed by a hidden ditch", "lines": ["It was not one foot deep. The storm drain has your car.", "The water looked shallow. It was not water all the way down."]},
+    "hit_cyclist":      {"points": 250, "label": "Hit a bicycle", "lines": ["Matooke everywhere, and a crowd collecting it. And you.", "He was carrying forty litres of water uphill. Now look."]},
+    "run_over_boda":    {"points": 300, "label": "Ran over a boda boda", "lines": ["You hit a boda boda. A crowd is forming very quickly. Nobody is smiling.", "The worst thing you can do on this road, and you have done it."]}
+  },
+  "car": {
+    "top_speed": 86.0, "accel": 44.0, "brake": 120.0, "reverse_speed": 22.0, "coast_drag": 12.0,
+    "turn_rate": 2.9, "grip_dry": 11.0, "grip_wet": 4.2, "unpaved_top_speed": 0.72,
+    "half_length": 5.6, "radius": 2.9
+  },
+  "incident": {
+    "run_over_speed": 34.0, "altercation_speed": 12.0, "collision_rel_speed": 22.0,
+    "obstruction_speed": 26.0, "trench_safe_speed": 18.0,
+    "freeze_run_over": 14.0, "freeze_altercation": 5.0, "freeze_collision": 3.5, "freeze_drain": 5.0, "freeze_trench": 8.0, "freeze_ditch": 18.0, "freeze_convoy": 8.0, "freeze_security": 9.0, "freeze_cyclist": 12.0
+  },
+  "licence_limit": 1000,
+  "ratings": [
+    {"max_ratio": 1.05, "title": "Born on Ggaba Road"},
+    {"max_ratio": 1.35, "title": "Kampala Driver"},
+    {"max_ratio": 1.8,  "title": "Lives in Muyenga, Works in Town"},
+    {"max_ratio": 2.6,  "title": "Learner, Please Pass"},
+    {"max_ratio": 999,  "title": "Visitor With a Maps App"}
+  ],
+  "route_full": {"start": "Speke Resort, Munyonyo", "finish": "Uganda Martyrs' Shrine, Namugongo"},
+  "route_box": {"start": "Trinity Church, Muyenga", "finish": "Kibuli Mosque"},
+  "works_names": ["Slowly But Surely Roads Ltd", "Next Financial Year Construction", "Pending Works & Sons", "Marram Brothers Contractors"],
+  "campaign": {
+    "order": ["sunday", "tuesday", "boxed_in", "friday", "rainy", "school"],
+    "term_traffic_step": 0.12,
+    "term_jam_step": 0.05
+  },
+  "levels": [
+    {"id": "sunday", "name": "Sunday Morning", "blurb": "Church traffic and clear roads. Enjoy it, it will not last.", "route": "route_full", "par": 400, "time_cap": 1500,
+     "traffic": 70, "jam": 0.02, "speed": 1.0, "mix": {"old_toyota": 36, "hatch": 8, "noah": 5, "suv": 8, "taxi": 12, "boda": 22, "bicycle": 5, "pickup": 2, "police": 1, "lorry": 1},
+     "hazards": {"rebar": 8, "open_drain": 4, "marram": 3, "trench": 1, "closure": 1, "flagger": 1, "partial": 0, "off_route_factor": 1.5},
+     "rain_chance": 0.0, "floods": 0, "convoys": 0.0, "vip_convoys": 0.0},
+    {"id": "tuesday", "name": "An Ordinary Tuesday", "blurb": "Nothing special happening. That is the problem.", "route": "route_full", "par": 450, "time_cap": 1600,
+     "traffic": 130, "jam": 0.09, "speed": 0.95, "mix": {"old_toyota": 26, "hatch": 6, "noah": 6, "suv": 8, "ngo": 2, "taxi": 18, "bus": 2, "boda": 20, "bicycle": 3, "handcart": 1, "pickup": 3, "lorry": 3, "tanker": 1, "police": 1, "army": 1},
+     "hazards": {"rebar": 14, "open_drain": 9, "marram": 6, "trench": 3, "closure": 3, "flagger": 3, "partial": 2, "off_route_factor": 2.0},
+     "rain_chance": 0.25, "floods": 10, "convoys": 0.35, "vip_convoys": 0.5},
+    {"id": "friday", "name": "Friday Evening", "blurb": "Everyone leaves work at once, then stops for one quick thing.", "route": "route_full", "par": 540, "time_cap": 1800,
+     "traffic": 185, "jam": 0.2, "speed": 0.88, "mix": {"old_toyota": 28, "hatch": 6, "noah": 6, "suv": 9, "ngo": 2, "taxi": 19, "bus": 2, "boda": 19, "bicycle": 2, "handcart": 1, "pickup": 3, "lorry": 3, "tanker": 1, "police": 1, "army": 1},
+     "hazards": {"rebar": 16, "open_drain": 11, "marram": 7, "trench": 4, "closure": 4, "flagger": 4, "partial": 3, "off_route_factor": 2.0},
+     "rain_chance": 0.3, "floods": 12, "convoys": 1.0, "vip_convoys": 0.8},
+    {"id": "rainy", "name": "Rainy Season", "blurb": "Wait and lose time, or drive in and find out how deep it is.", "route": "route_full", "par": 620, "time_cap": 1900,
+     "traffic": 200, "jam": 0.15, "speed": 0.8, "mix": {"old_toyota": 32, "hatch": 6, "noah": 7, "suv": 11, "ngo": 2, "taxi": 19, "bus": 2, "boda": 12, "bicycle": 1, "pickup": 3, "lorry": 4, "tanker": 1, "police": 1, "army": 1},
+     "hazards": {"rebar": 14, "open_drain": 12, "marram": 5, "trench": 3, "closure": 4, "flagger": 2, "partial": 2, "off_route_factor": 2.0},
+     "rain_chance": 1.0, "rain_start": 25, "floods": 24, "convoys": 0.3, "vip_convoys": 0.3},
+    {"id": "school", "name": "Back to School", "blurb": "Every parent, every van, every mattress on every roof. The final boss.", "route": "route_full", "par": 720, "time_cap": 2200,
+     "traffic": 240, "jam": 0.34, "speed": 0.78, "mix": {"old_toyota": 24, "hatch": 5, "noah": 6, "suv": 10, "taxi": 14, "bus": 2, "school_van": 14, "boda": 17, "bicycle": 2, "pickup": 3, "lorry": 2, "police": 1, "army": 1},
+     "hazards": {"rebar": 18, "open_drain": 13, "marram": 8, "trench": 5, "closure": 6, "flagger": 5, "partial": 4, "off_route_factor": 2.0},
+     "rain_chance": 0.5, "floods": 18, "convoys": 1.0, "vip_convoys": 0.8},
+    {"id": "boxed_in", "name": "Boxed In: Muyenga", "blurb": "St Barnabas closed. Kalungi impassable. A trench on Bukasa. Tank Hill three-quarters gone. Get to Kibuli.", "route": "route_box", "par": 120, "time_cap": 480,
+     "traffic": 110, "jam": 0.12, "speed": 0.9, "mix": {"old_toyota": 28, "hatch": 8, "noah": 5, "suv": 12, "taxi": 10, "boda": 28, "bicycle": 3, "handcart": 2, "pickup": 3, "lorry": 1},
+     "hazards": {"rebar": 4, "open_drain": 3, "marram": 2, "trench": 0, "closure": 0, "flagger": 1, "partial": 0, "off_route_factor": 1.0},
+     "authored": [
+       {"road": "St. Barnabas Road", "type": "closure"},
+       {"road": "Kalungi Road", "type": "closure"},
+       {"road": "Kalungi Road", "type": "marram"},
+       {"road": "Bukasa Road", "type": "trench"},
+       {"road": "Tank Hill Road", "type": "partial"},
+       {"road": "Tank Hill Road", "type": "flagger"}
+     ],
+     "rain_chance": 0.0, "floods": 0, "convoys": 0.0, "vip_convoys": 0.0}
+  ]
+}

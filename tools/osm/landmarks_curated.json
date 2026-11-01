@@ -1,0 +1,26 @@
+{
+  "_doc": "Hero landmarks a Kampala driver navigates by. 'match' is a regex on the OSM name; the build fails if it finds nothing, so nothing here is invented. kind picks the in-game icon. km_order is unused by code; the list reads south to north.",
+  "start": {"match": "^Speke Resort Munyonyo$", "display": "Speke Resort, Munyonyo", "kind": "hotel"},
+  "finish": {"match": "^Uganda Martyrs' Shrine$", "display": "Uganda Martyrs' Shrine, Namugongo", "kind": "shrine"},
+  "heroes": [
+    {"match": "^Martyrs' Shrine Munyonyo$", "display": "Munyonyo Martyrs' Shrine", "kind": "shrine"},
+    {"match": "^Ggaba Market$", "display": "Ggaba Market", "kind": "market"},
+    {"match": "^Ggaba National Major Seminary$", "display": "Ggaba Seminary", "kind": "church"},
+    {"match": "^Trinity Church Muyenga$", "display": "Trinity Church, Muyenga", "kind": "church"},
+    {"match": "^International Hospital Kampala$", "display": "IHK", "kind": "hospital"},
+    {"match": "^Kassam Mosque", "display": "Kassam Mosque, Kabalagala", "kind": "mosque"},
+    {"match": "^Kibuli Mosque$", "display": "Kibuli Mosque", "kind": "mosque"},
+    {"match": "^Kibuli Muslim Hospital$", "display": "Kibuli Hospital", "kind": "hospital"},
+    {"match": "^Uganda Martyrs University", "display": "Uganda Martyrs University, Nsambya", "kind": "university"},
+    {"match": "^Forest Mall$", "display": "Forest Mall, Lugogo", "kind": "mall"},
+    {"match": "^Lugogo Shopping Mall$", "display": "Lugogo Mall", "kind": "mall"},
+    {"match": "^Kyambogo University$", "display": "Kyambogo University", "kind": "university"},
+    {"match": "^Mandela National Stadium$", "display": "Namboole Stadium", "kind": "stadium"},
+    {"match": "^Banda Martyrs Church$", "display": "Banda Martyrs Church", "kind": "church"},
+    {"match": "^Capital Shoppers Ntinda$", "display": "Capital Shoppers, Ntinda", "kind": "mall"},
+    {"match": "^Metroplex Shopping Mall", "display": "Metroplex, Naalya", "kind": "mall"},
+    {"match": "^Kyaliwajjala Trading Centre$", "display": "Kyaliwajjala Trading Centre", "kind": "market"},
+    {"match": "^Namugongo Cathedral$", "display": "Namugongo Cathedral", "kind": "church"},
+    {"match": "^Namugongo Martyr's Church$", "display": "Namugongo Martyrs' Church", "kind": "church"}
+  ]
+}

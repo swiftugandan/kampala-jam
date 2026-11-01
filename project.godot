@@ -1,0 +1,40 @@
+; Kampala Jam. Map data (c) OpenStreetMap contributors, ODbL 1.0.
+config_version=5
+
+[application]
+
+config/name="Kampala Jam"
+config/description="Munyonyo to Namugongo through the real streets of Kampala."
+config/version="0.1.0"
+config/features=PackedStringArray("4.7", "GL Compatibility")
+run/main_scene="res://src/main.tscn"
+boot_splash/show_image=false
+boot_splash/bg_color=Color(0.09, 0.08, 0.07, 1)
+config/icon="res://assets/icon.png"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+window/dpi/allow_hidpi.web=false
+window/handheld/orientation=4
+
+[importer_defaults]
+
+texture={
+"mipmaps/generate": true
+}
+
+[physics]
+
+common/physics_ticks_per_second=60
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=2
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+textures/vram_compression/import_etc2_astc=true
+environment/defaults/default_clear_color=Color(0.345, 0.47, 0.26, 1)
