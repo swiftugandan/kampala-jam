@@ -51,7 +51,7 @@ python3 -I tools/audio/make_sfx.py     # synthesises the sound
 - `src/core/`: the simulation, with no rendering, which is why a bot can test it headless.
 - `src/world/`, `src/ui/`: everything drawn on screen.
 - `assets/data/game_rules.json`: penalties, days, hazards, car handling. `vehicle_catalog.json`: the fleet and motorcades. Tune here, not in code.
-- `design/game-brief.md`: the design on one page. `production/session-logs/decision-log.md`: why things are the way they are.
+- `design/game-brief.md`: the design on one page.
 
 Built on the [Claude Code Game Studios](https://github.com/Donchitos/Claude-Code-Game-Studios) template (MIT; its own README is at `docs/ccgs/README.md`). Run `claude` from this folder to get its agents and skills.
 
